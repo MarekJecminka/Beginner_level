@@ -1,1 +1,8 @@
-if 
+Print('Welcome to the public roads thief race game!\You are thief trying get to the safe place with your just robbed treassure. Unfortunately your weird behavior has been spotted by police officers, whose decided to check on you. You need to be very fast and get into a random vehicle quickly.\nWhat kind of vehicle do you want to be in?')
+vehicle=input('Sport car, ambulance or taxi? ')
+
+if vehicle.lower()=='ambulance':
+elif vehicle.lower()=='sport car':
+elif vehicle.lower()=='taxi':
+else:
+    return 'Wrong selection! Try again!'
