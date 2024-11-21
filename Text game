@@ -1,7 +1,18 @@
-Print('Welcome to the public roads thief race game!\You are thief trying get to the safe place with your just robbed treassure. Unfortunately your weird behavior has been spotted by police officers, whose decided to check on you. You need to be very fast and get into a random vehicle quickly.\nWhat kind of vehicle do you want to be in?')
+play=input('Welcome to the public roads thief race game! Do you want to play?')
+
+if play.lower()!= 'yes':
+    quit()
+
+print('You are thief trying get to the safe place with your just robbed treassure. Unfortunately your weird behavior has been spotted by police officers, whose decided to check on you. You need to be very fast and get into a random vehicle quickly.\nWhat kind of vehicle do you want to be in?\n')
 vehicle=input('Sport car, ambulance or taxi? ')
 
 if vehicle.lower()=='ambulance':
+    stop=input('As ambulance with warning lights on you are going pretty fast through trafic lights and you left officers way behind you so you turned warning lights off. Suddenly you can see car crash right in front of you. Will you stop to help or not (yes/no)?')
+    if stop==yes:
+        print('You were caught by officers since they followed you.')
+    else:
+        print('You immediately turned to the perpendicular street to avoid car crash and quickly ended up at your private garrage. Enjoy your loot!')
+
 elif vehicle.lower()=='sport car':
 elif vehicle.lower()=='taxi':
 else:
