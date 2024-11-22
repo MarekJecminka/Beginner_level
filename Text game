@@ -8,12 +8,40 @@ vehicle=input('Sport car, ambulance or taxi? ')
 
 if vehicle.lower()=='ambulance':
     stop=input('As ambulance with warning lights on you are going pretty fast through trafic lights and you left officers way behind you so you turned warning lights off. Suddenly you can see car crash right in front of you. Will you stop to help or not (yes/no)?')
-    if stop==yes:
+    
+    if stop=="yes":
         print('You were caught by officers since they followed you.')
-    else:
+    elif stop=="no":
         print('You immediately turned to the perpendicular street to avoid car crash and quickly ended up at your private garrage. Enjoy your loot!')
+    else:
+        print('Wrong selection! Try again!')
 
 elif vehicle.lower()=='sport car':
-elif vehicle.lower()=='taxi':
+    place_type=input("With sport car you have a lot of chances to escape. Do you want to go to the country or the suburbs (country/suburbs)?")
+    
+    if place_type.lower()=="country":
+    exact_place=input("xxxxxxxxxxxxx(farm/woods/interstate)")
+
+        if exact_place.lower()=="farm":
+            print("xxxxxxxxxxx")
+        elif exact_place.lower()=="woods":
+            print("xxxxxxxxx")
+        elif exact_place.lower()=="interstate":
+            print("xxxxxx")
+        else:
+            print('Wrong selection! Try again!')
+
+    if place_type.lower()=="suburbs":
+        exact_place=input("xxxxxx(park/hostage/street)")
+
+            if exact_place=="park":
+                print("xxxxxxxxx")
+            elif exact_place=="hostage":
+                print("xxxxxxxxx")
+            elif exact_place=="street":
+                print("xxxxxxxxxx")
+            else:
+                print('Wrong selection! Try again!')
+
 else:
-    return 'Wrong selection! Try again!'
+    print('Wrong selection! Try again!')
