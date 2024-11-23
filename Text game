@@ -1,47 +1,50 @@
-play=input('Welcome to the public roads thief race game! Do you want to play?')
+play=input('Welcome to the public roads thief race game! Do you want to play?').lower()
 
-if play.lower()!= 'yes':
+if play!='yes':
     quit()
 
-print('You are a thief trying get to a safe place with your just stolen treasure. Unfortunately, your weird behavior has been spotted by police officers who decided to follow you. You need to be very fast and get into a random vehicle quickly.\nWhat kind of vehicle do you want to be in?\n')
-vehicle=input('Sports car, ambulance or taxi? ')
+print('You are a thief trying get to a safe place with your just stolen treasure. Unfortunately, your weird behavior has been spotted by cops who decided to follow you. You need to be very fast and get into a random vehicle quickly.\nWhat kind of vehicle do you want to be in?\n')
+vehicle=input('Sports car or ambulance? ').lower()
 
-if vehicle.lower()=='ambulance':
-    stop=input('As an ambulance with warning lights on you are going pretty fast through trafic lights and you left officers way behind you so you turned the warning lights off. Suddenly, you see a car crash right in front of you. Will you stop to help or not (yes/no)?')
+if vehicle=='ambulance':
+    stop=input('As an ambulance with warning lights on you are going pretty fast through trafic lights and you left cops way behind you so you turned the warning lights off. Suddenly, you see a car crash right in front of you. Will you stop to help or not (yes/no)?' ).lower()
     
     if stop=="yes":
-        print('You were caught by the officers since they followed you.')
+        print('You were caught by the cops since they followed you.')
     elif stop=="no":
         print('You immediately turned onto a perpendicular street to avoid the car crash and quickly ended up at your private garage. Enjoy your loot!')
     else:
         print('Wrong selection! Try again!')
 
-elif vehicle.lower()=='sports car':
-    place_type=input("In the sports car you have two options to escape. You can choose to drive to the country or the suburbs. Which one do you choose? (country/suburbs)?")
+elif vehicle=='sports car':
+    place_type=input("In the sports car you have two options to escape. You can choose to drive to the country or the suburbs. Which one do you choose? (country/suburbs)? ").lower()
     
-    if place_type.lower()=="country":
-    exact_place=input("When you drive out to the country, you can drive to a farm, the woods or get onto the interstate. Choose wisely. (farm/woods/interstate)")
+    if place_type=="country":
+        exact_place=input("When you drive out to the country, you can drive to a farm, the woods or get onto the interstate. Choose wisely. (farm/woods/interstate) ").lower()
 
-        if exact_place.lower()=="farm":
+        if exact_place=="farm":
             print("You arrive at the farm but the cops are on your tail and before you can hide, they surround you and make you surrender. You lose.")
-        elif exact_place.lower()=="woods":
+        elif exact_place=="woods":
             print("You head for the woods where you slow down, jump out of your moving car without the cops spotting you and get to safety on foot. Enjoy your loot! ")
-        elif exact_place.lower()=="interstate":
+        elif exact_place=="interstate":
             print("You turn onto the interstate and get into a high speed chase with the police, lose control over your vehicle, crash and burn alive.")
         else:
             print('Wrong selection! Try again!')
 
-    if place_type.lower()=="suburbs":
-        exact_place=input("Driving into the suburbs, you think of ways to outsmart the cops. You can either head for the dog park, hide in somebody´s driveway or take a random pedestrian hostage. Which do you choose?(dog park/driveway/hostage)")
+    elif place_type=="suburbs":
+        exact_place=input("Driving into the suburbs, you think of ways to outsmart the cops. You can either head for the dog park, hide in somebody´s driveway or take a random pedestrian hostage. Which do you choose? (dog park/driveway/hostage)" ).lower()
 
-            if exact_place=="dog park":
-                print("Normally, the dog park would be a great choice. Unfortunately, the dog park is hosting a K9 unit demo today. You are screwed! ")
-            elif exact_place=="street":
-                print("You drive fast and take turns as often as you can. Just as you turn onto another street, you see a long driveway to a remote house. You turn onto the driveway, the cops drive passed you thinkking you´re already another street over. You get out of the car and just a cab to drive you home. Enjoy your loot!")
-            elif exact_place=="hostage":
-                print("You pull over and grab the first person you see on the street. You hold a fake knife to their throat. Before you can force the person into your car, the cops are there, guns drawn and pointing at you. They evaluate the situation and decide to shoot you on the spot to save the hostage. You lose.")
-                        else:
-                print('Wrong selection! Try again!')
+        if exact_place=="dog park":
+            print("Normally, the dog park would be a great choice. Unfortunately, the dog park is hosting a K9 unit demonstration today. You are screwed!")
+        elif exact_place=="street":
+            print("You drive fast and take turns as often as you can. Just as you turn onto another street, you see a long driveway to a remote house. You turn onto the driveway, the cops drive passed you thinkking you´re already another street over. You get out of the car and call a cab to drive you home. Enjoy your loot!")
+        elif exact_place=="hostage":
+            print("You pull over and grab the first person you see on the street. You hold a fake knife to their throat. Before you can force the person into your car, the cops are there, guns drawn and pointing at you. They evaluate the situation and decide to shoot you on the spot to save the hostage. You lose.")
+        else:
+            print('Wrong selection! Try again!')
+
+    else:
+        print('Wrong selection! Try again!')
 
 else:
     print('Wrong selection! Try again!')
