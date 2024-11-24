@@ -1,4 +1,5 @@
-play=input('Welcome to the public roads thief race game! Do you want to play? ').lower()
+name=input("Hello! What is your name? ")
+play=input("Welcome to the public roads thief race game, " + name + "! Do you want to play? ").lower()
 
 if play!='yes':
     quit()
