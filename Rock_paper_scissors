@@ -3,32 +3,35 @@ options = ["rock","paper","scissors"]
 user_wins = 0
 computer_wins = 0
 
-While True:
-  player_pick = input("Lest play rock, paper, scissors game.\n\nWhat do you pick? (rock/paper/scissors or quit)? ").lower()
-  random = random.randint(0,2)
-  computer_pick = options[random]
-  print("Computer picked " + computer_pick + ".")
+print("Lets play rock, paper, scissors game.\n")
 
-  if player_pick == "q" or "quit":
-    break()
+while True:
+    player_pick = input("What do you pick? (rock/paper/scissors or Q to quit)? ").lower()
+   
+    if player_pick == "q":
+        break
 
-  if players_pick not in options:
-    continue
-  
-  if player_pick == "rock" and computer pick == "scissors":
-    return "You won!"
-    user_wins += 1
+    if player_pick not in options:
+        continue
 
-  elif player_pick == "paper" and computer pick == "rock":
-    return "You won!"
-    user_wins += 1
+    random_number = random.randint(0,2)
+    computer_pick = options[random_number]
+    print("Computer picked " + computer_pick + ".")
 
-  elif player_pick == "scissors" and computer pick == "paper":
-    return "You won!"
-    user_wins += 1
+    if player_pick == "rock" and computer_pick == "scissors":
+        print("You won!")
+        user_wins += 1
 
-  else:
-    return "You loose!"
-    computer_wins += 1
+    elif player_pick == "paper" and computer_pick == "rock":
+        print("You won!")
+        user_wins += 1
 
-print("You won " + user_wins + " times. Computer won " + computer_wins + " times. Thank you for playing!)
+    elif player_pick == "scissors" and computer_pick == "paper":
+        print("You won!")
+        user_wins += 1
+
+    else:
+        print("You loose!")
+        computer_wins += 1
+
+print("You won " + str(user_wins) + " times. Computer won " + str(computer_wins) + " times. Thank you for playing!")
