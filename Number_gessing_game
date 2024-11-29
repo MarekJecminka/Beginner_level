@@ -7,11 +7,11 @@ if max_value.isdigit():
 
     if max_value <= 0:
         print("Please print number greater than 0 next time.")
-        break
+        quit()
 
 else:
     print("Type a number next time.")
-    break
+    quit()
 
 guesses = 0
 random_number = random.randint(1, max_value)
@@ -33,9 +33,7 @@ while True:
         print("You were above the number.")
 
     else:
-        print("You got it!)
+        print("You got it!")
         break
 
-print("You got it in " + guesses + " guesses!")
-
-<>=
+print("You got it in " + str(guesses) + " guesses!")
