@@ -1,1 +1,45 @@
+playing = input("Welcome to our Quiz show. Do you want to play? ").lower()
 
+if playing != "yes":
+  quit()
+
+print("Let's play!")
+score = 0
+
+answer = input(" ").lower()
+if answer == " ":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input(" ").lower()
+if answer == " ":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input(" ").lower()
+if answer == " ":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input(" ").lower()
+if answer == " ":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input(" ").lower()
+if answer == " ":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect!")
+
+print("You got " + str(score) + " correct questions.")
+print("You got " + str(score/5*100) + " %")
